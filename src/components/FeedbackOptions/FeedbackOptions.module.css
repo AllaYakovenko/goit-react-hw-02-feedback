@@ -1,0 +1,16 @@
+.FeedbackButton {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 3px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.ButtonContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
