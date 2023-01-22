@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Statistics from 'components/Statistics/Statistics'
-// import css from "components/FeedbackOptions/FeedbackOptions.module.css";
 import Section from "./Section/Section";
 import Notification from 'components/Notification/Notification';
 
@@ -13,21 +12,9 @@ class App extends Component {
     bad: 0,
   };
 
-  showGoodFeedback = () => {
+  showFeedback = option => {
     this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
-  };
-
-  showNeutralFeedback = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
-
-  showBadFeedback = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
+      [option]: prevState[option] + 1,
     }));
   };
 
@@ -57,9 +44,8 @@ class App extends Component {
       >
         <Section title="Please leave feedback" >  
           <FeedbackOptions
-            onGoodFeedback={this.showGoodFeedback}
-            onNeutralFeedback={this.showNeutralFeedback}
-            onBadFeedback={this.showBadFeedback}
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.showFeedback}
           />{' '}
           </Section>
 

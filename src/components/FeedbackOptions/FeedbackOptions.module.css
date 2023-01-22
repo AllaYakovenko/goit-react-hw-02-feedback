@@ -1,3 +1,10 @@
+.ButtonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
 .FeedbackButton {
     cursor: pointer;
     padding: 10px;
@@ -8,9 +15,6 @@
     font-size: 16px;
 }
 
-.ButtonContainer{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
+.FeedbackButton:active{
+    background-color:cornflowerblue;
 }
